@@ -1,0 +1,14 @@
+﻿@model NasaPhotos
+@{
+    ViewData["Title"] = "GetPhotos";
+}
+
+<h1>Get Photos</h1>
+For the Date: @ViewBag.date
+<br />
+
+@foreach(Photo p in Model.Photos){
+  <div class="gallery"> @p.Id
+   <img src="@p.ImgSrc" />
+   </div>
+}

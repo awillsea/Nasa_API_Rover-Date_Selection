@@ -1,0 +1,29 @@
+﻿@model NasaPhotos
+@{
+    
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <h1 class="display-4">Please Pick a Date and a Rover</h1>
+<br />
+    <form method="post" action="/home/getphotos">
+    
+        Date: <br />
+        <input type="date" name="earth_date" /><br />
+    
+        <label for="rover">Choose a Rover:</label><br />
+        <select name="rover">
+          <option value="Curiosity">Curiosity</option>
+          <option value="Opportunity">Opportunity</option>
+          <option value="Spirit">Spirit</option>
+     
+        </select>
+        <input type="submit" />
+    </form>
+</div>
+
+@*@foreach(Photo p in Model.Photos){
+   <div> @p.Id</div>
+   <img src="@p.ImgSrc" />
+}*@
+
